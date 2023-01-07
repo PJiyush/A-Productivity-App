@@ -1,4 +1,5 @@
 import React from 'react'
+import Sidebar from './Sidebar'
 
 function Navbar() {
     return (
@@ -15,9 +16,11 @@ function Navbar() {
                                 <a className="nav-link float-right" href="#">Pomodoro</a>
                             </li>
                         </ul>
+                        
                     </div>
                 </div>
             </nav>
+            <Sidebar/>
         </div>
     )
 }
