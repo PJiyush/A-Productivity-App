@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import './Clock.css'
 
 function Clock() {
     const [seconds, setSeconds] = useState(0)
@@ -20,6 +21,11 @@ function Clock() {
 
     const handleTimer=()=>{
         setSeconds((seconds)=>seconds+1)
+        if (seconds>59) {
+            setSeconds(0)
+            setMins((mins)=>mins+1)
+
+        }
     }
 
     useEffect(() => {
@@ -36,13 +42,14 @@ function Clock() {
     })
 
     return (
-        <div>
+        <div className='MyContainer'>
             <div className='container'>
                 <p id="timer"><span id="mins">{mins}</span>:<span id="seconds">{seconds}</span></p>
-            </div>
-            <button type="button" className="btn btn-outline-success m-3" id='btn-start' onClick={startTimer}>Start</button>
-            <button type="button" className="btn btn-outline-danger m-3" id='btn-stop' onClick={stopTimer}>Stop</button>
+
+            <button type="button" className={`btn btn${stop?"-outline-":"-"}success m-3`}  id='btn-start' onClick={startTimer}>Start</button>
+            <button type="button" className={`btn btn${!stop?"-outline-":"-"}danger m-3`} id='btn-stop' onClick={stopTimer}>Stop</button>
             <button type="button" className="btn btn-outline-info m-3" id='btn-reset' onClick={resetTimer}>Reset</button>
+            </div>
         </div>
     )
 }
