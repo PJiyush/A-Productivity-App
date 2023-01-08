@@ -1,4 +1,5 @@
 import React from 'react'
+import Clock from './Clock'
 
 function Sidebar() {
     return (
@@ -11,6 +12,7 @@ function Sidebar() {
                 </div>
                 <div className="offcanvas-body">
                     <p>Here a stopWatch would come</p>
+                <Clock/>
                 </div>
             </div>
         </div>
