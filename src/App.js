@@ -5,11 +5,11 @@ import Navbar from './Components/Navbar';
 
 
 function App() {
-  const [totaltime, setTotaltime] = useState(0)
+  
   return (
     <>
     <Navbar/>
-    <Chart time={totaltime}/>
+    <Chart/>
     </>
   );
 }

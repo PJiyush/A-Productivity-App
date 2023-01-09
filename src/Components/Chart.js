@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 function Chart() {
     const [totaltime, setTotaltime] = useState(0)
     useEffect(()=>{
-        setTotaltime((totaltime)=>totaltime+parseInt(localStorage.getItem("yourTime")) )
+      localStorage.getItem("yourTime")===null?localStorage.setItem("yourTime",String(totaltime)):setTotaltime((totaltime)=>totaltime+parseInt(localStorage.getItem("yourTime")) )
         return ()=>setTotaltime(0)
     })
     const reloadBtn=()=>{
