@@ -6,6 +6,7 @@ function Clock() {
     const [mins, setMins] = useState(0)
     const [stop, setStop] = useState(true)
 
+    
     const startTimer = () => {
         setStop(false)
     }
@@ -14,6 +15,8 @@ function Clock() {
     }
 
     const resetTimer=()=>{
+        var prevValue=localStorage.getItem("yourTime")
+        localStorage.setItem("yourTime",String(parseInt(prevValue)+mins))
         setSeconds(0)
         setMins(0)
         setStop(true)
