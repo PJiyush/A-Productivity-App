@@ -36,7 +36,7 @@ function Clock() {
         if (!stop) {
             timer = setInterval(() => {
                 handleTimer()
-            }, 1000)
+            }, 100)
         }
         else {
             clearInterval(timer)
