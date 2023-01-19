@@ -42,3 +42,9 @@
   right:20px;
   cursor: pointer;
 }
+
+.animatioContainer{
+  display: block;
+  position: relative;
+  top: 250px;
+}

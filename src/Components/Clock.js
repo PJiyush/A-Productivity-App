@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Animation from './Animation'
 import './Clock.css'
 
 function Clock() {
@@ -52,6 +53,9 @@ function Clock() {
             <button type="button" className={`btn btn${stop?"-outline-":"-"}success m-3`}  id='btn-start' onClick={startTimer}>Start</button>
             <button type="button" className={`btn btn${!stop?"-outline-":"-"}danger m-3`} id='btn-stop' onClick={stopTimer}>Stop</button>
             <button type="button" className="btn btn-outline-info m-3" id='btn-reset' onClick={resetTimer}>Reset</button>
+            </div>
+            <div className="animatioContainer">
+            <Animation/>
             </div>
         </div>
     )
