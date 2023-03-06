@@ -1,24 +1,23 @@
 {
   "name": "a-productivity-app",
   "version": "0.1.0",
+  "homepage": "https://PJiyush.github.io/A-Productivity-App",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "animejs": "^3.2.1",
     "axios": "^1.3.4",
-    "chart.js": "^4.1.2",
     "react": "^18.2.0",
-    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
     "react-scripts": "5.0.1",
     "react-spring": "^9.6.1",
-    "request": "^2.88.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -41,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
