@@ -1,7 +1,7 @@
 {
+  "homepage": "https://PJiyush.github.io/A-Productivity-App",
   "name": "a-productivity-app",
   "version": "0.1.0",
-  "homepage": "https://PJiyush.github.io/A-Productivity-App",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
