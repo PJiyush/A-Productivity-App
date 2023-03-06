@@ -1,10 +1,10 @@
 import React from 'react'
 import Sidebar from './Sidebar'
-
+import './Navbar.css'
 function Navbar() {
     return (
         <div >
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav className="navbar navbar-expand-lg navbar-dark styleTheNavbar">
                 <div className="container-fluid ">
                     <a className="navbar-brand" href="#">PJiyush</a>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">

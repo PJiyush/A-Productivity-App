@@ -47,11 +47,11 @@ function TodoList() {
                 </div>
                 <form className="row gy-10 gx-5 align-items-center" >
                     <div className="col-auto">
-                        <label className="visually-hidden" htmlFor="autoSizingInput">Name</label>
-                        <input type="text" className="form-control gy-10" id="autoSizingInput" placeholder="What you want to do" value={message} onChange={e=>setMessage(e.target.value)} />
+                        {/* <label className="visually-hidden" htmlFor="autoSizingInput">Name</label> */}
+                        <input type="text" className="form-control gy-10 style-form" id="autoSizingInput" placeholder="What you want to do" value={message} onChange={e=>setMessage(e.target.value)} />
                     </div>
                     <div className="col-auto">
-                        <button type="submit" className="btn btn-primary" onClick={
+                        <button type="submit" className="btn-submit" onClick={
                     e=>{e.preventDefault()
                             setMessageList([...messageList,message])
                             setMessage('')
