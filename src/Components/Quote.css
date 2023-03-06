@@ -1,0 +1,11 @@
+.styleCard{
+    background-image: linear-gradient(to left,#150050,#9F2BC1);
+    color: white;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stylecard-header{
+    background-color: #150050;
+}

@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import FetchQuotes from './FetchQuotes'
+import Quote from './Quote'
 import Todo from './Todo'
 
 function TodoList() {
@@ -54,7 +56,11 @@ function TodoList() {
                     </div>
                 </form>
             </div>
+            <div className='container-fluid my-5'>
+                <FetchQuotes/>
+            </div>
         </div>
+        
     )
 }
 

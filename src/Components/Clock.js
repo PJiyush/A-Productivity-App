@@ -47,7 +47,7 @@ function Clock() {
 
     return (
         <div className='MyContainer'>
-            <div className='container'>
+            <div className='container containerStyle'>
                 <p id="timer"><span id="mins">{mins}</span>:<span id="seconds">{seconds}</span></p>
 
             <button type="button" className={`btn btn${stop?"-outline-":"-"}success m-3`}  id='btn-start' onClick={startTimer}>Start</button>
