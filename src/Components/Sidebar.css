@@ -1,0 +1,15 @@
+.currentSessionStyle{
+    background-color: rgb(18, 0, 121);
+    color: goldenrod;
+    border: 2px solid goldenrod;
+}
+
+.currentSessionStyle:hover{
+    background-color: rgb(15, 6, 66);
+    color: white;
+}
+
+.offcanvasStyle{
+    background-image: linear-gradient(#150050,#3F0071);
+    color: whitesmoke;
+}
