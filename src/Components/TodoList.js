@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import FetchQuotes from './FetchQuotes'
-import Quote from './Quote'
 import Todo from './Todo'
+import './TodoList.css'
 
 function TodoList() {
     const [message, setMessage] = useState('')
@@ -19,18 +19,22 @@ function TodoList() {
 
     const clearAll=()=>{
         localStorage.removeItem('todos',JSON.stringify(messageList))
+        console.log(messageList);
         setMessageList([])
     }
+
+
     return (
         <div>
-            <button type="button" className="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <button type="button" className="btn btn-todo" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                 TodoList <span className="badge text-bg-secondary"> {lengthOfList}</span>
             </button>
-            <div className="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div className="offcanvas offcanvas-end styleOffCanvasTodo" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
                 <div className="offcanvas-header">
-                    <h5 className="offcanvas-title" id="offcanvasRightLabel" onDoubleClick={clearAll}>Your Todo List</h5>
+                    <h5 className="offcanvas-title" id="offcanvasRightLabel" >Your Todo List</h5>
                     <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
+                    <button type="button" className="btn-remove" onClick={clearAll}>Remove All</button>
                 <div className="offcanvas-body">
                     {
                         messageList.map((todo,index)=>(

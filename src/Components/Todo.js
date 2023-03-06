@@ -2,8 +2,8 @@ import React from 'react'
 import {TfiCheck} from 'react-icons/tfi'
 function Todo(props) {
     return (
-        <div className="card" >
-            <div className="card-header">
+        <div className="card styleTodoCard" >
+            <div className="card-header styleTodoCardHeader">
                 {props.number+1}
                 <span className='checkBox'><TfiCheck/></span>
             </div>
